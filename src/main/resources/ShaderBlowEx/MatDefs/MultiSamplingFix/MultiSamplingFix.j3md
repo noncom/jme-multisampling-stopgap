@@ -1,0 +1,20 @@
+MaterialDef Default BetterToneMap {
+
+    MaterialParameters {
+        Int NumSamples
+        Int NumSamplesDepth
+        Texture2D Texture
+    }
+
+    Technique {
+        VertexShader GLSL100 GLSL150:   ShaderBlowEx/MatDefs/MultiSamplingFix/MultiSamplingFix.vert
+        FragmentShader GLSL100 GLSL150: ShaderBlowEx/MatDefs/MultiSamplingFix/MultiSamplingFix.frag
+
+        WorldParameters {
+        }
+
+        Defines {
+            NUM_SAMPLES : NumSamples
+        }
+    }
+}
